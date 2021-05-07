@@ -1,0 +1,50 @@
+
+<div class="card my-5">
+    <div class="card-body">
+        <form [formGroup]="addSong" >
+            <div class="form-group">
+                <label for="songName">Song Name</label>
+                <input type="text" class="form-control" id="songName" formControlName="songName" placeholder="Enter Song name">
+            </div>
+            <div class="alert alert-danger"> Song Name is required</div>
+            <div class="form-group">
+                <label for="songArtist">Artist Name</label>
+                <input type="text" class="form-control" id="songArtist" formControlName="songArtist" placeholder="Enter the Artist Name">
+            </div>
+            <div class="alert alert-danger">Artist Name is required</div>
+
+            <div class="form-group">
+                <label for="songLocation">Song Location</label>
+                <input type="text" class="form-control" id="songLocation" formControlName="songLocation" placeholder="Enter Song Location">
+            </div>
+            <div class="alert alert-danger"> Song Location is required</div>
+
+            <div class="form-group">
+                <label for="songAlbum">Song Album</label>
+                <input type="text" class="form-control" id="songAlbum" formControlName="songAlbum" placeholder="Enter Song Album">
+            </div>
+            <div class="alert alert-danger"> Song Album is required</div>
+
+            <div class="form-group">
+                <label for="songDuration">Song Duration</label>
+                <input type="text" class="form-control" id="songDuration" formControlName="songDuration" placeholder="Enter Song Duration">
+            </div>
+            <div class="alert alert-danger"> Song Duration is required</div>
+
+
+            <div class="form-group">
+                <label for="songTags">Song Tags</label>
+                <input type="text" class="form-control" id="songTags" formControlName="songTags" placeholder="Enter Song Tags">
+            </div>
+            <div class="alert alert-danger"> Song Tags is required</div>
+
+            <button type="submit" class="btn btn-info"  (click)="onSubmit()">Submit</button>
+            <button  style="margin:10px" (click)="clear()" class="btn btn-info" >Reset</button>
+            
+           
+            
+            <button style="margin:10px"  routerLink="/"  class="btn btn-info">Home</button>
+        </form>
+        <p>{{message}}</p>
+    </div>
+</div>
