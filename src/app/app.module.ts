@@ -32,6 +32,7 @@ import { VgCoreModule } from 'videogular2/compiled/core';
 import { VgControlsModule } from 'videogular2/compiled/controls';
 import { VgOverlayPlayModule } from 'videogular2/compiled/overlay-play';
 import { VgBufferingModule } from 'videogular2/compiled/buffering';
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { VgBufferingModule } from 'videogular2/compiled/buffering';
     MatIconModule,
     MatSnackBarModule,
     MatRadioModule,
-     MatListModule ,VgControlsModule,VgCoreModule,VgOverlayPlayModule,VgBufferingModule
+     MatListModule ,VgControlsModule,VgCoreModule,VgOverlayPlayModule,VgBufferingModule,
+     YouTubePlayerModule
 
   ],
    providers: [authInterceptorProviders],

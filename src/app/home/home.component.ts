@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 import { OperationsService } from "../operations.service";
 
 @Component({
@@ -7,7 +8,7 @@ import { OperationsService } from "../operations.service";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  constructor(private operationService: OperationsService) {}
+  constructor(private operationService: OperationsService, private sanitizer:DomSanitizer) {}
 
   selectedFile: File;
 
@@ -20,7 +21,14 @@ export class HomeComponent implements OnInit {
   message: string;
 
   imageName: any;
-  ngOnInit() {}
+ 
+  safeURL:any;
+  
+
+  ngOnInit() {
+    this.safeURL=this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/8ZvFXrJSX6o");
+
+  }
 
   public onFileChanged(event) {
     //Select File
@@ -66,4 +74,18 @@ export class HomeComponent implements OnInit {
         this.retrievedImage = "data:video/mp4;base64," + this.base64Data;
       });
   }
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
 }
