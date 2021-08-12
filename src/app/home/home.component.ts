@@ -62,7 +62,8 @@ export class HomeComponent implements OnInit {
 
         this.base64Data = this.retrieveResonse.picByte;
 
-        this.retrievedImage = "data:image/jpeg;base64," + this.base64Data;
+        // this.retrievedImage = "data:image/jpeg;base64," + this.base64Data;
+        this.retrievedImage = "data:video/mp4;base64," + this.base64Data;
       });
   }
 }

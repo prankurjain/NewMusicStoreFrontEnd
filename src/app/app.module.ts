@@ -28,6 +28,12 @@ import { HomeComponent } from './home/home.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { VgCoreModule } from 'videogular2/compiled/core';
+import { VgControlsModule } from 'videogular2/compiled/controls';
+import { VgOverlayPlayModule } from 'videogular2/compiled/overlay-play';
+import { VgBufferingModule } from 'videogular2/compiled/buffering';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +73,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatIconModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatListModule
+     MatListModule ,VgControlsModule,VgCoreModule,VgOverlayPlayModule,VgBufferingModule
 
   ],
    providers: [authInterceptorProviders],
