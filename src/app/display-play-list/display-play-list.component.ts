@@ -16,6 +16,8 @@ export class DisplayPlayListComponent implements OnInit {
 
   displayPlayList()
   {
-    this.service.displayPlayList((<HTMLInputElement>document.getElementById("playlistname")).value).subscribe(data=>this.name=data);
+    this.service.displayPlayList((<HTMLInputElement>document.getElementById("playlistname")).value).subscribe(data=>{
+      this.name=data;
+    console.log(this.name)});
   }
 }
